@@ -1,0 +1,13 @@
+{
+  "API_URL": "",
+  "APP_NAME": "Contact IQ",
+  "ICE_SERVER": "stun:stun.ekiga.net",
+  "ICE_TIMEOUT": 2000,
+  "E_MODE": false,
+  "L_MODE": 1,
+  "SIP_HOST": "",
+  "SIP_WS": "",
+  "EMPTY_CONTENT": "",
+  "CALL_TRANSFER": false,
+  "E_KEYS": false
+}

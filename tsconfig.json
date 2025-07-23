@@ -1,0 +1,28 @@
+{
+  // "files": [],
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.app.json"
+  //   },
+  //   {
+  //     "path": "./tsconfig.node.json"
+  //   }
+  // ],
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "composite": true,
+    "noEmit": true, // Prevent emitting compiled files
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "strict": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
