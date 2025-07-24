@@ -57,7 +57,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "ClientId",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="ID" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="ID" />
     ),
     enableResizing: true,  
     size: 60,                
@@ -65,9 +65,9 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
+        <div className="flex justify-start items-center space-x-2">
           <span
-            className={`max-w-[500px] truncate   ${
+            className={`p-4 max-w-[500px] truncate   ${
               row.original.IsDeleted === 1 ? "text-red-500" : ""
             }`}
           >
@@ -80,7 +80,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "ClientName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Name" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Name" />
     ),
     enableResizing: true,  
     size: 100,                
@@ -89,7 +89,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("ClientName")}
           </span>
         </div>
@@ -100,7 +100,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "BranchName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Branch" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Branch" />
     ),
     enableResizing: true,  
     size: 100,                
@@ -109,7 +109,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("BranchName")}
           </span>
         </div>
@@ -119,7 +119,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "PreferedAgentId1",
     header: ({ column }) => (
-      <DataTableColumnHeader
+      <DataTableColumnHeader className="flex justify-start items-center"
         column={column}
         title="Pref. Agent 1"
         allowTooltip
@@ -133,7 +133,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("PreferedAgentId1")}
           </span>
         </div>
@@ -143,7 +143,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "PreferedAgentId2",
     header: ({ column }) => (
-      <DataTableColumnHeader
+      <DataTableColumnHeader className="flex justify-start items-center"
         column={column}
         title="Pref. Agent 2"
         allowTooltip
@@ -157,7 +157,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("PreferedAgentId2")}
           </span>
         </div>
@@ -167,7 +167,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "PreferedAgentId3",
     header: ({ column }) => (
-      <DataTableColumnHeader
+      <DataTableColumnHeader className="flex justify-start items-center"
         column={column}
         title="Pref. Agent 3"
         allowTooltip
@@ -181,7 +181,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("PreferedAgentId3")}
           </span>
         </div>
@@ -191,7 +191,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
   {
     accessorKey: "ActiveFlag",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Active" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Active" />
     ),
     enableResizing: true,  
     size: 30,                
@@ -200,7 +200,7 @@ export const desktopColumns: ColumnDef<ClientMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="p-4 max-w-[500px] truncate">
             {row.original.ActiveFlag == 1 ? "Yes" : "No"}
           </span>
         </div>

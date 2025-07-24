@@ -128,7 +128,7 @@ function Followups() {
                     <X className="h-3 w-3 text-[#f97316] group-hover:text-white" />
                   </div>
                 </Badge>
-              )}abcd
+              )
             </div> */}
           </div>
         </div>

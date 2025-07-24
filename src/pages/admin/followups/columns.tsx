@@ -20,12 +20,12 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
   {
     accessorKey: "TaskStatus",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Status" />
     ),
     cell: ({ row }) => {
       return (
         <div className="flex items-center">
-          <span className="ml-2">
+          <span className="ml-2 p-2">
             {getTaskStatusName(row.original.TaskStatus)}
           </span>
         </div>
@@ -35,25 +35,25 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
   {
     accessorKey: "ClientId",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Client ID" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Client ID" />
     ),
     cell: ({ row }) => {
       return (
         <div className="flex items-center">
-          <span className="ml-2">{row.original.ClientId}</span>
+          <span className="ml-2 p-2">{row.original.ClientId}</span>
         </div>
       );
     },
   },
-  {
+  { 
     accessorKey: "ClientName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Client Name" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Client Name" />
     ),
     cell: ({ row }) => {
       return (
-        <div className="flex items-center">
-          <span className="ml-2">{row.original.ClientName}</span>
+        <div className="flex justify-start items-center">
+          <span className="ml-2 p-2 ">{row.original.ClientName}</span>
         </div>
       );
     },
@@ -62,12 +62,12 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
   {
     accessorKey: "Title",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="About" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="About" />
     ),
     cell: ({ row }) => {
       return (
         <div className="flex items-center">
-          <span className="ml-2">{row.original.Title}</span>
+          <span className="ml-2 p-2">{row.original.Title}</span>
         </div>
       );
     },
@@ -75,7 +75,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
   {
     accessorKey: "FollowUpTime",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Followup time" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Followup time" />
     ),
     cell: ({ row }) => {
       let formattedTime = "";
@@ -88,7 +88,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
 
       return (
         <div className="flex items-center">
-          <span className="ml-2">{formattedTime}</span>
+          <span className="ml-2 p-2">{formattedTime}</span>
         </div>
       );
     },
@@ -96,12 +96,12 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
   {
     accessorKey: "AttendedId",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Completed by" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Completed by" />
     ),
     cell: ({ row }) => {
       return (
         <div className="flex items-center">
-          <span className="ml-2">{row.original.AttendedId}</span>
+          <span className="ml-2 p-2">{row.original.AttendedId}</span>
         </div>
       );
     },

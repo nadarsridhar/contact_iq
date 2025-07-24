@@ -321,7 +321,7 @@ function ClientMaster() {
       const obj = {
         accessorKey: "ClientNumber",
         header: ({ column }) => (
-          <DataTableColumnHeader column={column} title="Mobile Number" />
+          <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Mobile Number" />
         ),
         enableResizing: true,
         size: 90,
@@ -329,8 +329,8 @@ function ClientMaster() {
         maxSize: 300,
         cell: ({ row }) => {
           return (
-            <div className="flex space-x-2">
-              <span className="max-w-[500px] truncate">
+            <div className="flex space-x-2 justify-start items-center p-2">
+              <span className="max-w-[500px]  truncate">
                 {row.getValue("ClientNumber")}
               </span>
             </div>
@@ -352,7 +352,7 @@ function ClientMaster() {
         maxSize: 300,
         cell: ({ row }) => {
           return (
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 p-2">
               <span className="max-w-[500px] truncate">
                 {row.getValue("Tpin")}
               </span>
@@ -372,7 +372,7 @@ function ClientMaster() {
         maxSize: 300,
         cell: ({ row }) => {
           return (
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 p-2">
               <span className="max-w-[500px] truncate">
                 {row.getValue("ClientEmailId")}
               </span>
@@ -392,7 +392,7 @@ function ClientMaster() {
         maxSize: 300,
         cell: ({ row }) => {
           return (
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 p-2">
               <span className="max-w-[500px] truncate">
                 {row.getValue("UpdatedBy")}
               </span>
@@ -417,7 +417,7 @@ function ClientMaster() {
           );
 
           return (
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 p-2">
               <span className="max-w-[500px] truncate">{formattedTime}</span>
             </div>
           );
@@ -435,7 +435,7 @@ function ClientMaster() {
         maxSize: 300,
         cell: ({ row }) => {
           return (
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 p-2">
               <span className="max-w-[500px] truncate">
                 {row.getValue("MappingTemplateId")}
               </span>
