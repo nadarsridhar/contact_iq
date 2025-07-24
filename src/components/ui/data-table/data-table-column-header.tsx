@@ -57,7 +57,7 @@ export function DataTableColumnHeader<TData, TValue>({
                 </Tooltip>
               </TooltipProvider>
             ) : (
-              <span className="font- text-gray-950 text-sm">{title}</span>
+              <span className="text-gray-950 text-sm">{title}</span>
             )}
             {column.getIsSorted() === "desc" ? (
               <ArrowDown size={12} />

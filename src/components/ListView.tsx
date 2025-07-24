@@ -142,7 +142,7 @@ export default function ListView({
           />
         ) : (
           <TableBody className="text-gray-950">
-            {table.getRowModel().rows?.length
+            {table.getRowModel().rows?.length 
               ? filledRows.map((row) => {
                   const callStatus = getCallStatus(
                     row.original?.CallStatus,

@@ -125,7 +125,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
   {
     accessorKey: "call-status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader className="flex justify-start items-center " column={column} title="Status" />
     ),
     enableResizing: true,
     size: 80,
@@ -171,7 +171,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
         <div className="flex items-center">
           <Badge
             variant="secondary"
-            className={`flex items-center space-x-1 ${callStatus.bgColor} ${callStatus.border}`}
+            className={`flex turncate justify-start items-center space-x-1 ${callStatus.bgColor} ${callStatus.border}`}
           >
             <span>{callTypeIcon}</span>
             <span>{callStatus.statusText}</span>
@@ -203,7 +203,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
   {
     accessorKey: "ClientId",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Client ID" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Client ID" />
     ),
     enableResizing: true,
     size: 80,
@@ -296,10 +296,12 @@ export const desktopColumns: ColumnDef<Call>[] = [
               : ""
           }`}
         >
-          <span>
-            {row.original.ClientId}
-            {row.original.TaggedClientIds && "," + row.original.TaggedClientIds}
-          </span>
+          <div className="flex items-center justify-start w-full h-full">
+            <span>
+              {row.original.ClientId}
+              {row.original.TaggedClientIds && "," + row.original.TaggedClientIds}
+            </span>
+          </div>
         </div>
       );
     },
@@ -307,16 +309,16 @@ export const desktopColumns: ColumnDef<Call>[] = [
   {
     accessorKey: "ClientName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Client Name" />
+      <DataTableColumnHeader  className="flex justify-start items-center" column={column} title="Client Name" />
     ),
     enableResizing: true,
     size: 80,
     minSize: 30,
-    maxSize: 300,
+    maxSize: 100,
     cell: ({ row }) => {
       return (
-        <div className="flex items-center">
-          <span>{row.original.ClientName}</span>
+        <div className="flex items-center  justify-start w-full h-full">
+          <span className="turncate">{row.original.ClientName}</span>
         </div>
       );
     },
@@ -337,16 +339,16 @@ export const desktopColumns: ColumnDef<Call>[] = [
   {
     accessorKey: "BranchName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Client Branch" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Client Branch" />
     ),
     enableResizing: true,
-    size: 70,
+    size: 40,
     minSize: 30,
-    maxSize: 300,
+    maxSize: 100,
     cell: ({ row }) => {
       return (
-        <div className="flex">
-          <span className="font-medium">{row.original.BranchName}</span>
+        <div className="flex items-center justify-start w-full h-full">
+          <span className="truncate ">{row.original.BranchName}</span>
         </div>
       );
     },
@@ -354,7 +356,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
   {
     accessorKey: "Duration",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Duration" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Duration" />
     ),
     enableResizing: true,
     size: 40,
@@ -362,8 +364,8 @@ export const desktopColumns: ColumnDef<Call>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="truncate font-medium">
+        <div className="flex space-x-2 items-center justify=start w-full h-full">
+          <span className="truncate">
             {formatDuration(row.original.Duration)}
           </span>
         </div>
@@ -373,7 +375,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
   {
     accessorKey: "StartTime",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Call Time" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Call Time" />
     ),
     enableResizing: true,
     size: 80,
@@ -381,13 +383,16 @@ export const desktopColumns: ColumnDef<Call>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       const formattedStartTime = convertDateTime(row.original.StartTime);
-      return <span className="truncate font-medium">{formattedStartTime}</span>;
+      return(
+      <div className="flex space-x-2 items-center justify=start w-full h-full">
+        <span className="truncate">{formattedStartTime}</span>
+      </div>)
     },
   },
   {
     accessorKey: "Remarks",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Remarks" />
+      <DataTableColumnHeader className="flex justify-start items-center" column={column} title="Remarks" />
     ),
     enableResizing: true,
     size: 50,
@@ -404,7 +409,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
                 </span>
               </TooltipTrigger>
               <TooltipContent>
-                <span className="text-xs">
+                <span className="text-xs turncate">
                   Updated by {row.original.UpdatedBy}
                 </span>
               </TooltipContent>

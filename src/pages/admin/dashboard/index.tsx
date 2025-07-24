@@ -684,16 +684,16 @@ export default function AdminDashboard() {
       const obj = {
         accessorKey: "ClientNumber",
         header: ({ column }) => (
-          <DataTableColumnHeader column={column} title="Client Number" />
+          <DataTableColumnHeader className="flex items-center justify-start" column={column} title="Client Number" />
         ),
         enableResizing: true,
         size: 60,
-        minSize: 30,
+        minSize: 65,
         maxSize: 300,
         cell: ({ row }) => {
           return (
-            <div className="flex">
-              <span className="font-medium">{row.original.ClientNumber}</span>
+            <div className="flex items-center justify-start">
+              <span className="turncate">{row.original.ClientNumber}</span>
             </div>
           );
         },
@@ -787,7 +787,7 @@ export default function AdminDashboard() {
         {!isMobile && (
           <h1 className="textAgent text-3xl font-bold text-primary whitespace-nowrap">
             {isSuperAdmin || isBranchAdmin ? "Admin" : globalState.AGENT_NAME}{" "}
-            Dashboard
+            Dashboard 
           </h1>
         )}
 
@@ -866,7 +866,7 @@ export default function AdminDashboard() {
                   variant={activeTab === TabState.CLIENTS ? `default` : `ghost`}
                   className={`${
                     activeTab === TabState.CLIENTS ? "" : "border"
-                  } w-full p-4`}
+                  } w-full p-4` }
                 >
                   Clients
                 </Button>
@@ -895,10 +895,10 @@ export default function AdminDashboard() {
                         {showClearFilterButton && (
                           <Badge
                             variant="outline"
-                            className="border-[#f97316] group hover:bg-[#f97316] hover:text-white text-[#f97316]"
+                            className=" border-[#f97316] group hover:bg-[#f97316] hover:text-white text-[#f97316]"
                             onClick={handleClearFilters}
                           >
-                            <span className="whitespace-nowrap">
+                            <span className="whitespace-nowrap ">
                               clear filters
                             </span>
                             <div className="ml-1 ring-offset-background rounded-full outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
@@ -917,7 +917,7 @@ export default function AdminDashboard() {
                             loadCallLogs();
                           }}
                         >
-                          <RefreshCcw className="h-5 w-5 text-gray-900" />
+                          <RefreshCcw className="h-5 w-5 text-gray-900"/>
                           <span className="sr-only">Refresh</span>
                         </Button>
                       </div>
