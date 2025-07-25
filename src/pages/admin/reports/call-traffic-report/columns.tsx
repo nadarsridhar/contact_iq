@@ -16,13 +16,15 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
   {
     accessorKey: "UserId",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="ID" />
+      <DataTableColumnHeader  column={column} title="ID" />
     ),
     enableResizing: true,
     size: 60,
     minSize: 30,
     maxSize: 300,
-    cell: ({ row }) => <div className="w-[80px]">{row.original.UserId}</div>,
+    cell: ({ row }) => <div className="w-[80px]">
+      <span className="flex p-4 max-w-[500px]">{row.original.UserId}</span>
+    </div>,
     enableSorting: false,
     enableHiding: false,
   },
@@ -38,7 +40,7 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.UserName}
           </span>
         </div>
@@ -57,7 +59,7 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.BranchName}
           </span>
         </div>
@@ -75,8 +77,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="space-x-2 justify-center flex item-center w-full">
+          <span className="flex max-w-[500px] truncate p-4">
             {row.original.IncomingCalls}
           </span>
         </div>
@@ -94,8 +96,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="flex space-x-2 justify-center item-center w-full">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.OutgoingCalls}
           </span>
         </div>
@@ -113,8 +115,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="flex space-x-2 justify-center flex item-center w-full">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.CompletedCalls}
           </span>
         </div>
@@ -132,8 +134,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="flex space-x-2 justify-center flex item-center w-full">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.MissedCalls}
           </span>
         </div>
@@ -151,8 +153,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="flex space-x-2 justify-center flex item-center w-full">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.UnansweredCalls}
           </span>
         </div>
@@ -177,10 +179,10 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
       };
 
       return (
-        <div className="flex space-x-2">
+        <div className="flex justify-center items-center space-x-2 w-full">
           <span
             onClick={handleClientDetailsReport}
-            className="max-w-[500px] truncate font-bold cursor-pointer underline text-blue-600"
+            className="flex justify-center items-center truncate font-bold cursor-pointer underline  text-blue-600"
           >
             {row.original.DistinctClient}
           </span>
@@ -199,8 +201,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="flex items-center justify-center w-full space-x-2">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.TotalCalls}
           </span>
         </div>
@@ -219,7 +221,7 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-5">
             {formatDuration(row.original.TotalCallDuration)}
           </span>
         </div>
@@ -237,8 +239,8 @@ export const desktopColumns: ColumnDef<CallTrafficReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+        <div className="flex jus space-x-2">
+          <span className="max-w-[500px] truncate p-4">
             {formatDuration(
               row.original.TotalCallDuration / row.original.TotalCalls
             )}

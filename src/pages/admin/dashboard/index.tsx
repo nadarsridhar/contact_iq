@@ -680,6 +680,7 @@ export default function AdminDashboard() {
 
   const columns = useMemo(() => {
     const cols = [...desktopColumns];
+    
     if (isPhoneNumberAllowed) {
       const obj = {
         accessorKey: "ClientNumber",

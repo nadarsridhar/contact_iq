@@ -11,7 +11,7 @@ export const columns: ColumnDef<Branch>[] = [
   {
     id: "select",
     header: ({ table }) => (
-      <Checkbox
+      <Checkbox 
         checked={
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
@@ -22,12 +22,14 @@ export const columns: ColumnDef<Branch>[] = [
       />
     ),
     cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-        className="translate-y-[2px]"
-      />
+      <div className="p-4">
+        <Checkbox
+          checked={row.getIsSelected()}
+          onCheckedChange={(value) => row.toggleSelected(!!value)}
+          aria-label="Select row"
+          className="translate-y-[2px]"
+        />
+      </div>
     ),
     enableSorting: false,
     enableHiding: false,
@@ -52,7 +54,7 @@ export const columns: ColumnDef<Branch>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("BranchName")}
           </span>
         </div>
@@ -68,7 +70,7 @@ export const columns: ColumnDef<Branch>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("BranchCategory") == 1 ? "Branch" : "Franchisee"}
           </span>
         </div>
@@ -84,7 +86,7 @@ export const columns: ColumnDef<Branch>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("BranchAddress")}
           </span>
         </div>

@@ -168,11 +168,10 @@ export const desktopColumns: ColumnDef<Call>[] = [
       }
 
       return (
-        <div className="flex items-center">
+        <div className=" flex items-center">
           <Badge
             variant="secondary"
-            className={`flex turncate justify-start items-center space-x-1 ${callStatus.bgColor} ${callStatus.border}`}
-          >
+            className={`flex turncate justify-start items-center space-x-1 ${callStatus.bgColor} ${callStatus.border}`}>
             <span>{callTypeIcon}</span>
             <span>{callStatus.statusText}</span>
           </Badge>

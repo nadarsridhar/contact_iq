@@ -17,7 +17,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
   {
     accessorKey: "UserId",
     header: ({ column }) => (
-      <DataTableColumnHeader
+      <DataTableColumnHeader className="ml-3"
         column={column}
         title={`${globalState.AGENT_NAME}`}
       />
@@ -27,11 +27,14 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
     minSize: 30,
     maxSize: 300,
     cell: ({ row }) => (
-      <div className="flex items-center gap-2">
-        {row.original.LoggedIn == 1 && (
-          <div className={`rounded-full h-2 w-2 bg-green-500`}></div>
-        )}
-        {row.original.UserId}
+
+        <div className="flex p-2 items-center gap-2">
+            <div className="w-3 h-2 flex items-center justify-center">
+              {row.original.LoggedIn == 1 && (
+            <div className="rounded-full h-2 w-2 bg-green-500"/>
+             )}
+        </div>
+         <span className="truncate">{row.original.UserId}</span>
       </div>
     ),
   },
@@ -47,7 +50,11 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
     size: 90,
     minSize: 30,
     maxSize: 300,
-    cell: ({ row }) => <div>{trimString(row.original.UserName, 30)}</div>,
+    cell: ({ row }) => <div>
+        <span className="p-4">
+          {trimString(row.original.UserName, 30)}
+          </span>
+      </div>,
   },
   {
     accessorKey: "UserCategory",
@@ -60,7 +67,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => (
       <div className="flex space-x-2">
-        <span className="max-w-[500px] truncate font-medium">
+        <span className="max-w-[500px] truncate p-4">
           {getUserCategoryName(row.original.UserCategory)}
         </span>
       </div>
@@ -77,7 +84,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
     maxSize: 300,
     cell: ({ row }) => (
       <div className="flex space-x-2">
-        <span className="max-w-[500px] truncate font-medium">
+        <span className="max-w-[500px] truncate p-4">
           {row.original.BranchName}
         </span>
       </div>
@@ -103,7 +110,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {formattedLoggedInTime}
           </span>
         </div>
@@ -130,7 +137,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {formattedLoggedOutTime}
           </span>
         </div>
@@ -151,7 +158,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {browser} {version ? `v${version}` : ""}
           </span>
         </div>
@@ -172,7 +179,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">{os}</span>
+          <span className="max-w-[500px] truncate p-4">{os}</span>
         </div>
       );
     },
@@ -190,7 +197,7 @@ export const desktopColumns: ColumnDef<UserActivityReportSchema>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.LoggedInAddress}
           </span>
         </div>
