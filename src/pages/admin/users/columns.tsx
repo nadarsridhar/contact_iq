@@ -32,18 +32,21 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     maxSize: 300,
     cell: ({ row }) => {
       return (
-        <div className="flex items-center space-x-2">
-          {row.original.LoggedIn == 1 && (
-            <div className={`rounded-full h-2 w-2 bg-green-500`}></div>
-          )}
+          <div className="p-2 flex justify-start items-center">
+          <div className="w-4 flex justify-start">
+            {row.original.LoggedIn == 1 && (
+              <span className="rounded-full h-2 w-2 bg-green-500"></span>
+            )}
+          </div>
           <span
-            className={`max-w-[500px] truncate font-medium ${
+            className={`ml-1 max-w-[500px] truncate  ${
               row.original.IsDeleted === 1 ? "text-red-500" : ""
             }`}
           >
             {row.getValue("UserId")}
           </span>
         </div>
+
       );
     },
   },
@@ -59,7 +62,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {trimString(row.getValue("UserName"), 15)}
           </span>
         </div>
@@ -80,7 +83,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {UserCategory}
           </span>
         </div>
@@ -99,7 +102,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("UserMobileNumber")}
           </span>
         </div>
@@ -118,7 +121,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("BranchName")}
           </span>
         </div>
@@ -137,7 +140,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("MappingTemplateId")}
           </span>
         </div>
@@ -156,7 +159,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("PrivilegeTemplateId")}
           </span>
         </div>
@@ -175,7 +178,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.WebRTCFlag == 1 ? "Internet Call" : "Normal Call"}
           </span>
         </div>
@@ -194,7 +197,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.ActiveFlag == 1 ? "Yes" : "No"}
           </span>
         </div>
@@ -213,7 +216,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.getValue("UserEmailId")}
           </span>
         </div>
@@ -232,7 +235,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate p-4">
             {row.original.LoginMode === 2 ? "SAML" : "Traditional Login"}
           </span>
         </div>
@@ -251,7 +254,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("UpdatedBy")}
           </span>
         </div>
@@ -275,7 +278,7 @@ export const desktopColumns: ColumnDef<UserMaster>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">{formattedTime}</span>
+          <span className="p-4 max-w-[500px] truncate">{formattedTime}</span>
         </div>
       );
     },

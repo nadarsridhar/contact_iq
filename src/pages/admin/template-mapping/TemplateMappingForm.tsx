@@ -242,7 +242,7 @@ function TemplateMappingForm() {
                     </FormLabel>
 
                     <FormControl>
-                      <Combobox
+                      <Combobox 
                         data={comboboxTemplateIds}
                         label="templates"
                         setValue={(val) => {
@@ -271,10 +271,12 @@ function TemplateMappingForm() {
                       Add Template
                     </FormLabel>
                     <FormControl>
-                      <Input
+                      <Input 
+                        minLength={3}
+                        maxLength={50}
                         placeholder=""
                         {...field}
-                        className="w-full border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                        className="w-full border border-gray-300 focus:border-primary uppercase focus:ring-2 focus:ring-primary/20"
                       />
                     </FormControl>
                     <FormMessage className="text-sm text-red-500" />

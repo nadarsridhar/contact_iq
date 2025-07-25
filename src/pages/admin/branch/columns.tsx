@@ -39,15 +39,17 @@ export const desktopColumns: ColumnDef<Branch>[] = [
   {
     accessorKey: "BranchName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Branch Name" />
+      <DataTableColumnHeader className="flex justify-start item bg-center" column={column} title="Branch Name" />
     ),
     enableResizing: true,
     size: 60,
     minSize: 30,
-    maxSize: 300,
+    maxSize: 100,
     cell: ({ row }) => (
       <div className={`${row.original.IsDeleted === 1 ? "text-red-600" : ""}`}>
+        <span className="p-4 max-w-[500px] truncat">
         {row.getValue("BranchName")}
+        </span>
       </div>
     ),
     enableSorting: false,
@@ -56,27 +58,36 @@ export const desktopColumns: ColumnDef<Branch>[] = [
   {
     accessorKey: "BranchAddress",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Branch Address" />
+      <DataTableColumnHeader className="flex justify-start item-center" column={column} title="Branch Address" />
     ),
     enableResizing: true,
     size: 60,
     minSize: 30,
-    maxSize: 300,
-    cell: ({ row }) => <div>{row.getValue("BranchAddress")}</div>,
+    maxSize: 100,
+    cell: ({ row }) =>
+       <div>
+        <span className="p-4 max-w-[500px] truncate">
+          {row.getValue("BranchAddress")}
+          </span>
+        </div>,
     enableSorting: false,
     enableHiding: false,
   },
   {
     accessorKey: "BranchCategory",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Branch Category" />
+      <DataTableColumnHeader className="flex justify-start item bg-center" column={column} title="Branch Category" />
     ),
     enableResizing: true,
     size: 60,
     minSize: 30,
-    maxSize: 300,
+    maxSize: 100,
     cell: ({ row }) => (
-      <div>{row.getValue("BranchCategory") == 1 ? "Branch" : "Franchisee"}</div>
+      <div>
+        <span className="p-4 max-w-[500px] truncate">
+        {row.getValue("BranchCategory") == 1 ? "Branch" : "Franchisee"}
+        </span>
+      </div>
     ),
     enableSorting: false,
     enableHiding: false,
@@ -84,16 +95,16 @@ export const desktopColumns: ColumnDef<Branch>[] = [
   {
     accessorKey: "UpdatedBy",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Updated By" />
+      <DataTableColumnHeader className="flex justify-start item bg-center" column={column} title="Updated By" />
     ),
     enableResizing: true,
     size: 60,
     minSize: 30,
-    maxSize: 300,
+    maxSize: 100,
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">
+          <span className="p-4 max-w-[500px] truncate">
             {row.getValue("UpdatedBy")}
           </span>
         </div>
@@ -103,12 +114,12 @@ export const desktopColumns: ColumnDef<Branch>[] = [
   {
     accessorKey: "LastUpdateTime",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Last Updated Time" />
+      <DataTableColumnHeader className="flex justify-start item bg-center" column={column} title="Last Updated Time" />
     ),
     enableResizing: true,
     size: 60,
     minSize: 30,
-    maxSize: 300,
+    maxSize: 100,
     cell: ({ row }) => {
       const formattedTime = format(
         new Date(Number(row.original.LastUpdateDate) * 1000),
@@ -116,8 +127,8 @@ export const desktopColumns: ColumnDef<Branch>[] = [
       );
 
       return (
-        <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate">{formattedTime}</span>
+        <div className="flex justify-start items-center space-x-2">
+          <span className="p-4 max-w-[500px] truncate">{formattedTime}</span>
         </div>
       );
     },

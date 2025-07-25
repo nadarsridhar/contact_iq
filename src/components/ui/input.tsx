@@ -34,7 +34,7 @@ const Input = React.forwardRef<HTMLInputElement, CustomInputProps>(
 
     return (
       <div className="relative flex items-center w-full">
-        <input
+        <input 
           type={type}
           className={cn(
             `flex h-9 bg-gray-200 w-full rounded-md border px-3 py-1 ${
