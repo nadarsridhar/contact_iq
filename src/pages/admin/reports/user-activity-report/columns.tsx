@@ -257,35 +257,35 @@ export const mobileColumns: ColumnDef<UserActivityReportSchema>[] = [
                 </div>
               </li>
             </AccordionTrigger>
-            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-700 border-gray-300 p-4 space-y-1 text-xs">
+            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-950 border-gray-300 p-4 space-y-1 text-xs">
               <div className="flex justify-between items-center rounded-lg">
-                <span>Branch</span>
+                <span className="font-semibold">Branch</span>
                 <span>{BranchName}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>User Category</span>
+                <span className="font-semibold">User Category</span>
                 <span>{getUserCategoryName(UserCategory)}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Browser</span>
+                <span className="font-semibold">Browser</span>
                 <span>
                   {browser} {browserVersion ? `v${browserVersion}` : ""}
                 </span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>OS</span>
+                <span className="font-semibold">OS</span>
                 <span>{os}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Last Logged In Time</span>
+                <span className="font-semibold">Last Logged In Time</span>
                 <span>{formattedLoggedInTime}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Last Logged Out Time</span>
+                <span className="font-semibold">Last Logged Out Time</span>
                 <span>{formattedLoggedOutTime}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Last Logged In IP</span>
+                <span className="font-semibold">Last Logged In IP</span>
                 <span>{LoggedInAddress}</span>
               </div>
             </AccordionContent>

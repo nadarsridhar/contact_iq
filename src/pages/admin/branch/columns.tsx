@@ -159,9 +159,9 @@ export const mobileColumns: ColumnDef<Branch>[] = [
       );
 
       return (
-        <Accordion type="single" collapsible className="w-full p-1">
+        <Accordion type="single" collapsible className="w-full p-0">
           <AccordionItem className="p-0" value="item-1">
-            <AccordionTrigger className="p-0 px-2">
+            <AccordionTrigger className="w-full font-semibold p-1 pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-opacity-50 rounded-md">
               <li
                 key={BranchName}
                 className="flex justify-between hover:bg-gray-50 transition-colors duration-150 ease-in-out w-full"

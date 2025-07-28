@@ -144,7 +144,7 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
       return (
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem className={''} value={`item-${ClientId || Title}`}>
-          <AccordionTrigger className="p-0">
+          <AccordionTrigger className="w-full font-semibold p-1 border border-spacing-0 pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-opacity-50 rounded-md">
               <div className="flex items-center justify-between w-full px-3 py-2 bg-white rounded-md border border-gray-100 hover:bg-gray-50 transition">
                 <div className="flex items-center gap-3 min-w-0">
                   <div className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 text-gray-500 font-semibold text-lg">
@@ -184,67 +184,36 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-4 py-3 bg-gray-50 border border-gray-100 rounded-b-md text-sm">
-              {/* <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                  <span className="w-28 text-gray-500">Client ID:</span>
-                  <span className="ml-1 text-gray-900">{ClientId || <span className="italic text-gray-400">-</span>}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="w-28 text-gray-500">Completed By:</span>
-                  <span className="ml-1 text-gray-900">{AttendedId || <span className="italic text-gray-400">-</span>}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="w-28 text-gray-500">Followup Time:</span>
-                  <span className="ml-1 text-gray-900">{formattedTime || <span className="italic text-gray-400">-</span>}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="w-28 text-gray-500">Task Status:</span>
-                  <span className={`ml-1 ${getTaskStatusName(TaskStatus) === "Completed" ? 'text-green-700' :getTaskStatusName(TaskStatus) === 'Cancelled' ?  'text-red-500'  :'text-yellow-700'}`}>{getTaskStatusName(TaskStatus)}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="w-28 text-gray-500">Client Name:</span>
-                  <span className="ml-1 text-gray-900">{ClientName || <span className="italic text-gray-400">-</span>}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="w-28 text-gray-500">Title:</span>
-                  <span className="ml-1 text-gray-900">{Title || <span className="italic text-gray-400">-</span>}</span>
-                </div>
-              </div> */}
-
-
-
-              {/* testing   */}
-             
-            <div className={`flex flex-col gap-y-3 border p${
+            <div className={`flex flex-col gap-y-1 border p${
                     getTaskStatusName(TaskStatus) === "Completed"
                       ? "border border-green-300 p-5 "
                       : getTaskStatusName(TaskStatus) === "Cancelled"
                       ? "border border-red-300 p-5"
                       : "border border-yellow-300 p-5"
                   }`}>
-              <div className="flex items-center justify-between border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-semibold">Client ID:</span>
-                <span className="ml-1 font-semibold text-gray-900">
+              <div className="flex items-center justify-between border-gray-300">
+                <span className="w-28 text-gray-950 font-semibold">Client ID:</span>
+                <span className="font-semibold text-gray-900">
                   {ClientId || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-semibold">Completed By:</span>
-                <span className="ml-1  text-gray-900">
+              <div className="flex items-center justify-between border-gray-300">
+                <span className="w-28 text-gray-950 font-semibold">Completed By:</span>
+                <span className=" text-gray-900">
                   {AttendedId || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-semibold">Followup Time:</span>
-                <span className="ml-1 text-gray-900">
+              <div className="flex items-center justify-between border-gray-300">
+                <span className="w-28 text-gray-950 font-semibold">Followup Time:</span>
+                <span className=" text-gray-900">
                   {formattedTime || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-semibold">Task Status:</span>
+              <div className="flex items-center justify-between border-gray-300">
+                <span className="w-28 text-gray-950 font-semibold">Task Status:</span>
                 <span
                   className={`ml-1 font-semibold ${
                     getTaskStatusName(TaskStatus) === "Completed"
@@ -258,16 +227,16 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 fontsemibold">Client Name:</span>
-                <span className="ml-1 text-gray-900">
+              <div className="flex items-center justify-between border-gray-300">
+                <span className="w-28 text-gray-950 font-semibold">Client Name:</span>
+                <span className=" text-gray-900">
                   {ClientName || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between ">
-                <span className="w-28 text-gray-700 font-semibold">Title:</span>
-                <span className="ml-1 text-gray-900">
+              <div className="flex items-center justify-between">
+                <span className="w-28 text-gray-950 font-semibold">Title:</span>
+                <span className=" text-gray-900">
                   {Title || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>

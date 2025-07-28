@@ -48,7 +48,7 @@ export function CreateFollowupDialog() {
       <DialogContent className="rounded w-4/5 md:max-w-[520px]">
         <DialogHeader>
           <DialogTitle className="text-2xl md:text-3xl mb-2 font-bold text-primary">
-            {title} followup
+            {title} Followup
           </DialogTitle>
         </DialogHeader>
         <FollowupForm />
@@ -160,7 +160,7 @@ export function FollowUpModalRenderer() {
             <DialogContent className="rounded w-4/5 md:max-w-[520px]">
               <DialogHeader>
                 <DialogTitle className="text-2xl md:text-3xl mb-2 font-bold text-primary">
-                  Follow up call
+                  Follow up Call
                 </DialogTitle>
               </DialogHeader>
               <div>

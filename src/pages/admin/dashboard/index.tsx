@@ -761,7 +761,7 @@ export default function AdminDashboard() {
       },
     },
     {
-      label: "Create followup",
+      label: "Create Followup",
       onClick: (row) => {
         // Open create followup dialog
         openCreateFollowupDialog();
@@ -773,7 +773,7 @@ export default function AdminDashboard() {
       isPrivilage: () => isFollowupTaskAllowed,
     },
     {
-      label: "View followup",
+      label: "View Followup",
       onClick: (row) => {
         openFollowupDetailsDialog();
         setFollowupDetailsData(row.original);

@@ -184,7 +184,7 @@ function FollowupForm() {
               render={({ field }) => {
                 return (
                   <FormItem>
-                    <FormLabel>Follow up time</FormLabel>
+                    <FormLabel>Follow up Time</FormLabel>
                     <FormControl className="ml-2">
                       <DatePicker
                         // format="dd-MM-yyyy HH:mm"

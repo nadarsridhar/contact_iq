@@ -95,7 +95,7 @@ export function DataTableRowActions<TData>({
                 setUpdateClientDetailsData(row.original);
               }}
             >
-              Create followup
+              Create Followup
             </Button>
           </DropdownMenuItem>
         )}

@@ -217,33 +217,33 @@ export const mobileColumns: ColumnDef<CallTrafficClientDetailsReportSchema>[] =
                   </div>
                 </li>
               </AccordionTrigger>
-              <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-700 border-gray-300 p-4 space-y-1 text-xs">
+              <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-950 border-gray-300 p-4 space-y-1 text-xs">
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Incoming Calls</span>
+                  <span className="font-semibold">Incoming Calls</span>
                   <span>{IncomingCalls ? IncomingCalls : 0}</span>
                 </div>
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Outgoing Calls</span>
+                  <span className="font-semibold">Outgoing Calls</span>
                   <span>{OutgoingCalls ? OutgoingCalls : 0}</span>
                 </div>
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Completed Calls</span>
+                  <span className="font-semibold">Completed Calls</span>
                   <span>{CompletedCalls ? CompletedCalls : 0}</span>
                 </div>
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Missed Calls</span>
+                  <span className="font-semibold">Missed Calls</span>
                   <span>{MissedCalls ? MissedCalls : 0}</span>
                 </div>
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Unanswered Calls</span>
+                  <span className="font-semibold">Unanswered Calls</span>
                   <span>{UnansweredCalls ? UnansweredCalls : 0}</span>
                 </div>
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Total Calls</span>
+                  <span className="font-semibold">Total Calls</span>
                   <span>{TotalCalls ? TotalCalls : 0}</span>
                 </div>
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Average Duration</span>
+                  <span className="font-semibold">Average Duration</span>
                   <span>
                     {formatDuration(
                       row.original.TotalCallDuration / row.original.TotalCalls

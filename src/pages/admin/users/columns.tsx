@@ -330,18 +330,21 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
       return (
         <Accordion type="single" collapsible className="w-full p-0">
           <AccordionItem className="p-0" value="item-1">
-            <AccordionTrigger className="p-0 px-2">
+            <AccordionTrigger className="w-full font-semibold p-1 pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-opacity-50 rounded-md">
               <li
                 key={UserId}
                 className="flex justify-between hover:bg-gray-50 transition-colors duration-150 ease-in-out w-full"
               >
                 <div className="flex justify-between items-center space-x-4 w-full mr-4">
-                  <div className="flex items-center justify-between w-full gap-2 hover:bg-gray-100">
+                  <div className="flex items-center justify-between w-full hover:bg-gray-100">
+                    <div className="w-4 flex justify-start">
+
                     {LoggedIn == 1 && (
                       <div
                         className={`rounded-full h-2 w-2 bg-green-500`}
                       ></div>
                     )}
+                    </div>
                     <div className={`flex-1 min-w-0`}>
                       <p
                         className={cn(

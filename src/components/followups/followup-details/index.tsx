@@ -95,7 +95,7 @@ function FollowupDetails() {
 
   const contextMenuItems = [
     {
-      label: "Modify followup",
+      label: "Modify Followup",
       onClick: (row) => {
         // Open create followup dialog
         openCreateFollowupDialog();
@@ -108,7 +108,7 @@ function FollowupDetails() {
       isPrivilage: () => isFollowupTaskAllowed,
     },
     {
-      label: "Cancel followup",
+      label: "Cancel Followup",
       onClick: (row) => {
         openCreateFollowupDialog();
         setModifyFollowupTask({
@@ -128,7 +128,7 @@ function FollowupDetails() {
       className={`${noFollowups ? "max-w-[420px]" : "max-w-[1600px]"} z-50`}
       isOpen={isOpen}
       onClose={onClose}
-      title={`Followup details`}
+      title={`Followup Details`}
     >
       {noFollowups ? (
         <p>No followups found!</p>

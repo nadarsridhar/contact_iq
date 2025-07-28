@@ -592,23 +592,23 @@ export const mobileColumns: ColumnDef<Call>[] = [
               </div>
             </AccordionTrigger>
 
-            <AccordionContent className="bg-gray-50/50 ">
+            <AccordionContent className="bg-gray-50/50 text-gray-950">
               <div className="px-4 space-y-3 text-sm">
                 <div className="grid grid-cols-2 gap-y-2 gap-x-4">
-                  <div className="text-gray-500">Client ID</div>
-                  <div className="font-medium text-right">{ClientId}</div>
+                  <div className="font-semibold">Client ID</div>
+                  <div className="font-semibold text-right">{ClientId}</div>
 
                   {isPhoneNumberAllowed && (
                     <>
-                      <div className="text-gray-500">Phone number</div>
-                      <div className="font-medium text-right flex items-center justify-end gap-1">
+                      <div className="font-semibold">Phone number</div>
+                      <div className=" text-right flex items-center justify-end gap-1">
                         {ClientNumber}
                       </div>
                     </>
                   )}
 
-                  <div className="text-gray-500">Client Branch</div>
-                  <div className="font-medium text-right">{BranchName}</div>
+                  <div className="font-semibold">Client Branch</div>
+                  <div className=" text-right">{BranchName}</div>
                 </div>
 
                 <Separator className="my-3" />
@@ -616,8 +616,8 @@ export const mobileColumns: ColumnDef<Call>[] = [
                 {Number(row.original.CallStatus) === CallStatusState.HANGUP && (
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-1">
-                      <Headphones className="h-4 w-4 text-gray-500" />
-                      <span className="text-gray-700">Call Recording</span>
+                      <Headphones className="h-4 w-4" />
+                      <span className="font-semibold">Call Recording</span>
                     </div>
                     <div className="flex items-center gap-2">
                       {isViewRecordingAllowed && (
@@ -642,8 +642,8 @@ export const mobileColumns: ColumnDef<Call>[] = [
                 <div className="flex justify-between items-center rounded-md">
                   {/* Label */}
                   <div className="flex items-center gap-2">
-                    <img className="w-5" src={FollowUp} alt="" />
-                    <span className="text-gray-700">Follow Ups</span>
+                    <img className="w-5 font-semibold" src={FollowUp} alt="" />
+                    <span className="font-semibold">Follow Ups</span>
                   </div>
 
                   {/* Actions */}
@@ -676,7 +676,7 @@ export const mobileColumns: ColumnDef<Call>[] = [
 
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <h4 className="font-medium text-gray-700">Remarks</h4>
+                    <h4 className="font-medium text-gray-950">Remarks</h4>
                     <Button
                       variant="ghost"
                       size="sm"

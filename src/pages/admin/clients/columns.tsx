@@ -268,7 +268,7 @@ export const mobileColumns: ColumnDef<ClientMaster>[] = [
                     <div className="min-w-0 flex-1">
                       <p
                         className={cn(
-                          "font-semibold truncate text-[13px]",
+                          "font-semibold truncate text-[11.76px]",
                           IsDeleted == 1 ? "text-red-500" : "text-gray-900"
                         )}
                       >
