@@ -13,11 +13,11 @@ function ClientsModal() {
   useEffect(() => {
     switch (action) {
       case ACTIONS.CREATE:
-        setTitle("Create client");
+        setTitle("Create Client");
         break;
 
       case ACTIONS.UPDATE:
-        setTitle("Update client");
+        setTitle("Update Client");
         break;
 
       case ACTIONS.DELETE:

@@ -176,7 +176,7 @@ export function DataTable<TData, TValue>({
   const isMobile = useIsMobile();
 
   return (
-    <div style={{ width: isMobile ? "97vw" : "100%" }}>
+    <div style={{ width: isMobile ? "70vw" : "100%" }}>
       {/* <div>
         <DataTableToolbar table={table} />
       </div>       */}

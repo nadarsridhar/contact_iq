@@ -159,7 +159,7 @@ export const mobileColumns: ColumnDef<Branch>[] = [
       );
 
       return (
-        <Accordion type="single" collapsible className="w-full p-0">
+        <Accordion type="single" collapsible className="w-full p-1">
           <AccordionItem className="p-0" value="item-1">
             <AccordionTrigger className="p-0 px-2">
               <li
@@ -192,27 +192,29 @@ export const mobileColumns: ColumnDef<Branch>[] = [
                 </div>
               </li>
             </AccordionTrigger>
-            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-700 border-gray-300 p-4 space-y-1 text-xs">
-              <div className="flex justify-between items-center rounded-lg">
-                <span>Branch</span>
-                <span>{BranchName}</span>
-              </div>
-              <div className="flex justify-between items-center rounded-lg">
-                <span>Address</span>
-                <span>{BranchAddress ? BranchAddress : "NA"}</span>
-              </div>
+            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-950 border-gray-300 p-4 space-y-1 text-xs">
+              <div className="">
+                <div className="flex justify-between items-center rounded-lg pb-1">
+                  <span className="font-semibold">Branch</span>
+                  <span>{BranchName}</span>
+                </div>
+                <div className="flex justify-between items-center rounded-lg pb-1">
+                  <span className="font-semibold">Address</span>
+                  <span>{BranchAddress ? BranchAddress : "NA"}</span>
+                </div>
 
-              <div className="flex justify-between items-center rounded-lg">
-                <span>Category</span>
-                <span>{BranchCategory == 1 ? "Branch" : "Franchisee"}</span>
-              </div>
-              <div className="flex justify-between items-center rounded-lg">
-                <span>Updated By</span>
-                <span>{UpdatedBy}</span>
-              </div>
-              <div className="flex justify-between items-center rounded-lg">
-                <span>Last Updated Time</span>
-                <span>{formattedTime}</span>
+                <div className="flex justify-between items-center rounded-lg pb-1">
+                  <span className="font-semibold">Category</span>
+                  <span>{BranchCategory == 1 ? "Branch" : "Franchisee"}</span>
+                </div>
+                <div className="flex justify-between items-center rounded-lg pb-1">
+                  <span className="font-semibold">Updated By</span>
+                  <span>{UpdatedBy}</span>
+                </div>
+                <div className="flex justify-between items-center rounded-lg pb-1">
+                  <span className="font-semibold">Last Updated Time</span>
+                  <span>{formattedTime}</span>
+                </div>
               </div>
             </AccordionContent>
           </AccordionItem>

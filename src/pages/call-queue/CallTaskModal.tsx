@@ -13,15 +13,15 @@ function CallTaskModal() {
   useEffect(() => {
     switch (action) {
       case ACTIONS.CREATE:
-        setTitle(`Create user`);
+        setTitle(`Create User`);
         break;
 
       case ACTIONS.UPDATE:
-        setTitle(`Update user`);
+        setTitle(`Update User`);
         break;
 
       case ACTIONS.DELETE:
-        setTitle(`${modalData?.IsDeleted == 0 ? "Delete" : "Restore"} user`);
+        setTitle(`${modalData?.IsDeleted == 0 ? "Delete" : "Restore"} User`);
         break;
     }
   }, [data]);

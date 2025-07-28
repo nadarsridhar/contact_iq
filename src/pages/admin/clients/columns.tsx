@@ -249,26 +249,26 @@ export const mobileColumns: ColumnDef<ClientMaster>[] = [
       return (
         <Accordion type="single" collapsible className="w-full p-0">
           <AccordionItem className="p-0" value="item-1">
-            <AccordionTrigger className="w-full pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-opacity-50 rounded-md">
+            <AccordionTrigger className="w-full font-semibold p-1 border border-spacing-0 pr-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-opacity-50 rounded-md">
               <li
                 key={ClientId}
                 className="flex w-full transition-colors duration-200 ease-in-out rounded-md"
               >
                 <div className="flex items-center justify-between w-full py-1 px-1">
                   <div className="flex items-center min-w-0 gap-2 flex-1">
-                    {(isClickToCallAllowed || isAMICallAllowed) && (
+                    {(isClickToCallAllowed || isAMICallAllowed) ? (
                       <div className="flex-shrink-0 border rounded-full p-0.5">
                         <HandleCall
                           className="w-[18px] h-[18px]"
                           call={row.original}
                         />
                       </div>
-                    )}
+                    ):null}
 
                     <div className="min-w-0 flex-1">
                       <p
                         className={cn(
-                          "font-semibold truncate text-[17px]",
+                          "font-semibold truncate text-[13px]",
                           IsDeleted == 1 ? "text-red-500" : "text-gray-900"
                         )}
                       >
@@ -292,64 +292,64 @@ export const mobileColumns: ColumnDef<ClientMaster>[] = [
                 </div>
               </li>
             </AccordionTrigger>
-            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-700 border-gray-300 p-4 space-y-1 text-xs">
-              <div className="flex justify-between items-center rounded-lg">
+            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-950 border-gray-300 p-4 space-y-1 text-xs">
+              <div className="font-semibold flex justify-between items-center rounded-lg">
                 <span>ID</span>
                 <span>{ClientId}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Name</span>
+                <span className="font-semibold">Name</span>
                 <span>{trimString(ClientName, 15)}</span>
               </div>
               {isPhoneNumberAllowed && (
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Mobile Number</span>
+                  <span className="font-semibold">Mobile Number</span>
                   <span>{ClientNumber}</span>
                 </div>
               )}
               {isClientCreateAllowed && (
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Email</span>
+                  <span className="font-semibold">Email</span>
                   <span>{ClientEmailId}</span>
                 </div>
               )}
               {isClientCreateAllowed && (
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Tpin</span>
+                  <span className="font-semibold">Tpin</span>
                   <span>{Tpin}</span>
                 </div>
               )}
               <div className="flex justify-between items-center rounded-lg">
-                <span>Branch</span>
+                <span className="font-semibold">Branch</span>
                 <span>{BranchName}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Pref. Agent 1</span>
+                <span className="font-semibold">Pref. Agent 1</span>
                 <span>{PreferedAgentId1}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Pref. Agent 2</span>
+                <span className="font-semibold">Pref. Agent 2</span>
                 <span>{PreferedAgentId2}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Pref. Agent 3</span>
+                <span className="font-semibold">Pref. Agent 3</span>
                 <span>{PreferedAgentId3}</span>
               </div>
               {isClientCreateAllowed && (
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Mapped Template</span>
+                  <span className="font-semibold">Mapped Template</span>
                   <span>{MappingTemplateId}</span>
                 </div>
               )}
               {isClientCreateAllowed && (
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Updated By</span>
+                  <span className="font-semibold">Updated By</span>
                   <span>{UpdatedBy}</span>
                 </div>
               )}
               {isClientCreateAllowed && (
                 <div className="flex justify-between items-center rounded-lg">
-                  <span>Last Updated Time</span>
+                  <span className="font-semibold">Last Updated Time</span>
                   <span>{formattedTime}</span>
                 </div>
               )}

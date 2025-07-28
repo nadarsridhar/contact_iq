@@ -119,43 +119,43 @@ function CallTrafficClientDetails({ dateRange, selectedBranches = "" }) {
 
   return (
     <Modal
-      size="6xl"
+      size="xl"
       isOpen={isOpen}
       onClose={onClose}
       title={`Client Details for ${SpecificUserId}`}
     >
-      <div className="flex items-center">
-        <Input
-          placeholder="Min 3 characters.."
-          value={searchText}
-          onChange={(event) => setSearchText(event.target.value)}
-          className="max-w-sm border border-stale-200"
-          isSearch
-        />
-
-        {!isMobile && (
-          <Export
-            handleFileExport={exportCallTrafficClientReport}
-            label="Export"
-            isExporting={isFileExporting}
+      <div className="max-h-[70vh] space-x-2 overflow-auto">
+        <div className="flex p-2 items-center">
+          <Input
+            placeholder="Min 3 characters.."
+            value={searchText}
+            onChange={(event) => setSearchText(event.target.value)}
+            className="max-w-sm border border-stale-200"
+            isSearch
           />
-        )}
-      </div>
-
-      {/* Client details records table */}
-      <div className="overflow-auto mt-4">
-        <DataTable
-          HideContextMenu={true}
-          tableId="Client_Details"
-          data={clientDetailsReport}
-          columns={isMobile ? mobileColumns : desktopColumns}
-          totalRecords={totalRecords?.TotalRecord ?? 0}
-          page={page}
-          recordsPerPage={recordsPerPage}
-          isLoading={isLoading}
-          handlePageChange={handlePageChange}
-          setRecordsPerPage={setRecordsPerPage}
-        />
+          {!isMobile && (
+            <Export
+              handleFileExport={exportCallTrafficClientReport}
+              label="Export"
+              isExporting={isFileExporting}
+            />
+          )}
+        </div>
+        {/* Client details records table */}
+        <div className="mt-4">
+          <DataTable
+            HideContextMenu={true}
+            tableId="Client_Details"
+            data={clientDetailsReport}
+            columns={isMobile ? mobileColumns : desktopColumns}
+            totalRecords={totalRecords?.TotalRecord ?? 0}
+            page={page}
+            recordsPerPage={recordsPerPage}
+            isLoading={isLoading}
+            handlePageChange={handlePageChange}
+            setRecordsPerPage={setRecordsPerPage}
+          />
+        </div>
       </div>
     </Modal>
   );

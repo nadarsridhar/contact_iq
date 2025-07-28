@@ -96,7 +96,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
 
       return (
         <div className="pl-1 flex items-center ">
-          {isCallingAllowed && <HandleCall call={row.original} />}
+          {isCallingAllowed && <HandleCall call={row.original}/>}
           <div className="flex items-center">
             {row.original.WebRTCCall === 1 ? (
               <TooltipProvider>
@@ -535,10 +535,10 @@ export const mobileColumns: ColumnDef<Call>[] = [
       const { DynamicWidth } = useAuth();
 
       return (
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full p-1">
           <AccordionItem
             value="item-1"
-            className="border rounded-lg mb- overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
+            className="border rounded-lg mb-0 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
           >
             <AccordionTrigger
               showIcon={true}
@@ -551,7 +551,7 @@ export const mobileColumns: ColumnDef<Call>[] = [
                       alt={ClientName || ClientId}
                       className="rounded-full object-cover"
                     />
-                    <AvatarFallback className="bg-primary text-primary-foreground font-medium">
+                    <AvatarFallback className="bg-primary text-primary-foreground font-medium ">
                       {(ClientName || ClientId)
                         ?.split(" ")
                         .map((n) => n[0])
@@ -581,18 +581,18 @@ export const mobileColumns: ColumnDef<Call>[] = [
                   </div>
                 </div>
 
-                {(isClickToCallAllowed || isAMICallAllowed) && (
+                {(isClickToCallAllowed || isAMICallAllowed)?(
                   <div className="flex items-center border rounded-full">
                     <HandleCall
                       className="w-[18px] h-[18px]"
                       call={row.original}
                     />
                   </div>
-                )}
+                ):null}
               </div>
             </AccordionTrigger>
 
-            <AccordionContent className="bg-gray-50/50">
+            <AccordionContent className="bg-gray-50/50 ">
               <div className="px-4 space-y-3 text-sm">
                 <div className="grid grid-cols-2 gap-y-2 gap-x-4">
                   <div className="text-gray-500">Client ID</div>
@@ -639,7 +639,7 @@ export const mobileColumns: ColumnDef<Call>[] = [
 
                 <Separator className="my-3" />
 
-                <div className="flex justify-between items-center  rounded-md ">
+                <div className="flex justify-between items-center rounded-md">
                   {/* Label */}
                   <div className="flex items-center gap-2">
                     <img className="w-5" src={FollowUp} alt="" />

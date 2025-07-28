@@ -367,29 +367,29 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
                 </div>
               </li>
             </AccordionTrigger>
-            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-700 border-gray-300 p-4 space-y-1 text-xs">
-              <div className="flex justify-between items-center rounded-lg">
+            <AccordionContent className="mx-4 m-4 rounded-lg border text-gray-950 border-gray-300 p-4 space-y-1 text-xs">
+              <div className="flex justify-between items-center rounded-lg font-semibold">
                 <span>ID</span>
                 <span>{UserId}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Name</span>
+                <span className="font-semibold">Name</span>
                 <span>{UserName}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Category</span>
+                <span className="font-semibold">Category</span>
                 <span>{UserCategoryName}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Mobile Number</span>
+                <span className="font-semibold">Mobile Number</span>
                 <span>{UserMobileNumber}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>CompanyName</span>
+                <span className="font-semibold">CompanyName</span>
                 <span>{CompanyName}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Call Type</span>
+                <span className="font-semibold">Call Type</span>
                 <span>
                   {row.original.WebRTCFlag == 1
                     ? "Internet Call"
@@ -397,17 +397,17 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
                 </span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Login Mode</span>
+                <span className="font-semibold">Login Mode</span>
                 <span>
                   {row.original.LoginMode == 2 ? "SAML" : "Traditional Login"}
                 </span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Active</span>
+                <span className="font-semibold">Active</span>
                 <span>{row.original.ActiveFlag == 1 ? "Yes" : "No"}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Email</span>
+                <span className="font-semibold">Email</span>
                 <span>{UserEmailId}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
@@ -415,19 +415,19 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
                 <span>{BranchName}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Mapped Template</span>
+                <span className="font-semibold">Mapped Template</span>
                 <span>{MappingTemplateId}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Privilege Template</span>
+                <span className="font-semibold">Privilege Template</span>
                 <span>{PrivilegeTemplateId}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Updated By</span>
+                <span className="font-semibold">Updated By</span>
                 <span>{UpdatedBy}</span>
               </div>
               <div className="flex justify-between items-center rounded-lg">
-                <span>Last Updated Time</span>
+                <span className="font-semibold">Last Updated Time</span>
                 <span>{formattedTime}</span>
               </div>
             </AccordionContent>

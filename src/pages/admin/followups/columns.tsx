@@ -222,29 +222,29 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
                       ? "border border-red-300 p-5"
                       : "border border-yellow-300 p-5"
                   }`}>
-              <div className="flex items-center justify-between border-b border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-bold">Client ID:</span>
-                <span className="ml-1 font-bold text-gray-900">
+              <div className="flex items-center justify-between border-gray-300 pb-1">
+                <span className="w-28 text-gray-700 font-semibold">Client ID:</span>
+                <span className="ml-1 font-semibold text-gray-900">
                   {ClientId || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-b border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-bold">Completed By:</span>
+              <div className="flex items-center justify-between border-gray-300 pb-1">
+                <span className="w-28 text-gray-700 font-semibold">Completed By:</span>
                 <span className="ml-1  text-gray-900">
                   {AttendedId || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-b border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-bold">Followup Time:</span>
+              <div className="flex items-center justify-between border-gray-300 pb-1">
+                <span className="w-28 text-gray-700 font-semibold">Followup Time:</span>
                 <span className="ml-1 text-gray-900">
                   {formattedTime || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-b border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-bold">Task Status:</span>
+              <div className="flex items-center justify-between border-gray-300 pb-1">
+                <span className="w-28 text-gray-700 font-semibold">Task Status:</span>
                 <span
                   className={`ml-1 font-semibold ${
                     getTaskStatusName(TaskStatus) === "Completed"
@@ -258,15 +258,15 @@ export const mobileColumns: ColumnDef<UserMaster>[] = [
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-b border-gray-300 pb-1">
-                <span className="w-28 text-gray-700 font-bold">Client Name:</span>
+              <div className="flex items-center justify-between border-gray-300 pb-1">
+                <span className="w-28 text-gray-700 fontsemibold">Client Name:</span>
                 <span className="ml-1 text-gray-900">
                   {ClientName || <span className="italic text-gray-400">-</span>}
                 </span>
               </div>
 
               <div className="flex items-center justify-between ">
-                <span className="w-28 text-gray-700 font-bold">Title:</span>
+                <span className="w-28 text-gray-700 font-semibold">Title:</span>
                 <span className="ml-1 text-gray-900">
                   {Title || <span className="italic text-gray-400">-</span>}
                 </span>

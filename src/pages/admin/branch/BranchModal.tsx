@@ -12,15 +12,15 @@ function BranchModal() {
   useEffect(() => {
     switch (action) {
       case ACTIONS.CREATE:
-        setTitle('Create branch');
+        setTitle('Create Branch');
         break;
 
       case ACTIONS.UPDATE:
-        setTitle('Update branch');
+        setTitle('Update Branch');
         break;
 
       case ACTIONS.DELETE:
-        setTitle('Delete branch');
+        setTitle('Delete Branch');
         break;
     }
   }, [data]);
