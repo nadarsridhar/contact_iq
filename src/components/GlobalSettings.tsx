@@ -404,7 +404,12 @@ export default function GlobalSettings() {
 
       <Card className="mt-12 max-w-4xl mx-auto">
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>Default Password Reset</CardTitle>
+          <CardTitle>
+             <h1
+            className={`text-3xl text-primary font-bold text-center md:text-left`}
+          >
+           Default Password Reset
+          </h1></CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>

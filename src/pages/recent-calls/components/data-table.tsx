@@ -180,7 +180,7 @@ export function DataTable<TData, TValue>({
       {/* <div>
         <DataTableToolbar table={table} />
       </div>       */}
-      <ListView
+      <ListView 
         handleDefaultColumnSizes={handleDefaultColumnSizes}
         setColumnVisibility={setColumnVisibility}
         columnInfo={columnInfo}

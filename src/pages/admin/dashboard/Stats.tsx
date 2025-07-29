@@ -88,7 +88,7 @@ function Stats({ stats, dateRange }) {
       color: "purple",
     },
     {
-      title: "Channels (Active / Peak)",
+      title:"Channels (Active / Peak)",
       value: stats?.ActiveChannel ?? 0,
       Pvalue: stats?.PeakChannel ?? 0,
       Tvalue: stats?.PeakChannelTime
@@ -144,7 +144,7 @@ function Stats({ stats, dateRange }) {
   };
 
   return (
-    <div className="grid gap-4 w-full grid-cols-2 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-4">
+    <div className="grid gap-4 w-full whitespace-nowrap grid-cols-2 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-4">
       {statsArray
         .filter((stat) => stat.hasPrivilege)
         .map(

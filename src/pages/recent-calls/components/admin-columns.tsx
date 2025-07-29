@@ -95,7 +95,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
         registerStatus === RegisterStatus.UNREGISTERED;
 
       return (
-        <div className="pl-1 flex items-center ">
+        <div className="pl-1 flex items-center">
           {isCallingAllowed && <HandleCall call={row.original}/>}
           <div className="flex items-center">
             {row.original.WebRTCCall === 1 ? (
