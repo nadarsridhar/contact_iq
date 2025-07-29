@@ -269,7 +269,14 @@ export const mobileColumns: ColumnDef<CallTrafficReportSchema>[] = [
         BranchName,
       } = row.original;
 
-      const { onOpen } = useCallTrafficClientDetailsModal();
+      const { onOpen, setData } = useCallTrafficClientDetailsModal();
+      const handleClientDetailsReport = () => {
+        onOpen();
+        setData({ modalData: { SpecificUserId: row.original.UserId } });
+      };
+
+
+
 
       return (
         <Accordion type="single" collapsible className="w-full p-0">
@@ -286,7 +293,7 @@ export const mobileColumns: ColumnDef<CallTrafficReportSchema>[] = [
                         {UserId} {UserName ? "-" : ""} {UserName}
                       </p>
                     </div>
-                    <EyeIcon onClick={onOpen} size={16} />
+                    <EyeIcon onClick={handleClientDetailsReport} size={16} />
                   </div>
                 </div>
               </li>
