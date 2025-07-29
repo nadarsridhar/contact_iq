@@ -169,8 +169,8 @@ function BranchMaster() {
   };
 
   return (
-    <div className="flex flex-col py-2.5">
-      <div className="flex justify-between items-end mb-2 py-4">
+    <div className="flex flex-col py-2">
+      <div className="flex justify-between items-end py-2">
         <h1 className="text-3xl text-primary font-bold md:mx-4 text-center md:text-left">
           Branch
         </h1>
@@ -215,11 +215,11 @@ function BranchMaster() {
           isResetPassordAllowed={false}
           data={branches}
           totalRecords={totalRecords?.TotalRecord ?? 0}
-          page={page}
           recordsPerPage={recordsPerPage}
           handlePageChange={handlePageChange}
           isLoading={isLoading}
           setRecordsPerPage={setRecordsPerPage}
+          page={page}
         />
       </div>
 

@@ -819,7 +819,7 @@ export default function AdminDashboard() {
 
       <Tabs
         defaultValue={TabState.RECENT_CALLS}
-        className="pt-5 flex flex-col gap-2"
+        className="pt-2 flex flex-col gap-2"
         onValueChange={(t: TabState) => setActiveTab(t)}
       >
         {isMobile && (

@@ -79,9 +79,9 @@ export default function ListView({
   ];
 
   return (
-    <div className="overflow-x-auto md:h-[400px]  max-h-[240px] overflow-auto border-gray-200 rounded border">
-      <Table className="md:border border-stale-300 table-fixed ">
-        {!isMobile && (
+    <div className="overflow-x-auto  max-h-[310px] overflow-auto border-gray-200 rounded border">
+      <Table className="md:border border-stale-300 table-fixed">
+        {!isMobile && ( 
           <ContextMenu modal={false}>
             <ContextMenuTrigger asChild>
               <TableHeader className="bg-gray-200 group">
