@@ -115,7 +115,7 @@ export const desktopColumns: ColumnDef<Call>[] = [
             {/* {isIncoming && <Incoming className="size-5" />}
             {isOutgoing && <Outgoing className="size-5" />} */}
             {row.original.IsFollowupScheduled && (
-              <CalendarClockIcon className="size-5 text-gray-500" />
+              <CalendarClockIcon className="size-5 text-gray-500 bg-gray-300" />
             )}
           </div>
         </div>

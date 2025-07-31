@@ -37,7 +37,7 @@ export function MultiSelectDropdown({
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-between border-2  bg-gray-100 overflow-hidden"
+            className="w-full justify-between border bg-gray-100  overflow-hidden border-gray-300"
           >
             {selectedItems.length > 0
               ? `${selectedItems.length} ${label} selected`

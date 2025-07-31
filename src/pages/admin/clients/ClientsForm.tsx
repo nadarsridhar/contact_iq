@@ -553,7 +553,7 @@ function ClientsForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Is Active</FormLabel>
-                    <Select
+                    <Select 
                       onValueChange={(val) => {
                         field.onChange(val);
                         setActiveFlag(val);
@@ -561,7 +561,7 @@ function ClientsForm() {
                       value={activeFlag}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-gray-100">
                           <SelectValue placeholder="Select user active.." />
                         </SelectTrigger>
                       </FormControl>

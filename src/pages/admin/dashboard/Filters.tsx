@@ -163,10 +163,10 @@ function Filters({
           value={loggedInFilter}
           onValueChange={(val) => setLoggedInFilter(val)}
         >
-          <SelectTrigger className="md:w-[80px]">
+          <SelectTrigger className="md:w-[95px] font-semibold bg-gray-100">
             <SelectValue placeholder="All Users" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent >
             <SelectItem value={-1}>All Users</SelectItem>
             <SelectItem value={1}>Logged In Users</SelectItem>
             <SelectItem value={0}>Logged Off Users</SelectItem>

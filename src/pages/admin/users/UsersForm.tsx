@@ -469,7 +469,7 @@ function UsersForm() {
                       value={userCategory}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-gray-100 border-gray-300">
                           <SelectValue
                             placeholder={`Select ${globalState.AGENT_NAME} category..`}
                           />
@@ -546,7 +546,7 @@ function UsersForm() {
                         value={webrtcFlag}
                       >
                         <FormControl>
-                          <SelectTrigger>
+                          <SelectTrigger className="bg-gray-100 border-gray-300">
                             <SelectValue placeholder="Select user active.." />
                           </SelectTrigger>
                         </FormControl>
@@ -657,7 +657,7 @@ function UsersForm() {
                       value={String(loginMode)}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-gray-100 border-gray-300">
                           <SelectValue placeholder="Select login mode.." />
                         </SelectTrigger>
                       </FormControl>
@@ -719,7 +719,7 @@ function UsersForm() {
                       value={activeFlag}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-gray-100 border-gray-300">
                           <SelectValue placeholder="Select user active.." />
                         </SelectTrigger>
                       </FormControl>

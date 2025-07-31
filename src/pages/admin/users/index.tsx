@@ -424,7 +424,7 @@ function UserMaster() {
 
       <div className="rounded-sm mx-1 md:mx-4">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-          <div className="grid grid-cols-2 sm:flex gap-2 md:justify-between md:items-center">
+          <div className="grid grid-cols-2 sm:flex gap-2 md:justify-between md:items-center ">
             <Filters
               searchText={searchText}
               setSearchText={setSearchText}

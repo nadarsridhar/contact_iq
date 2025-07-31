@@ -83,15 +83,15 @@ export function Combobox({
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger className="border-slate-200 overflow-hidden" asChild>
+      <PopoverTrigger className="border-gray-300 bg-gray-100 overflow-hidden" asChild>
         <Button
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="flex justify-between w-full border border-gray-300"
+          className="flex justify-between w-full border bg-gray-100 border-gray-300"
           disabled={disabled}
         >
-          <span className="text-gray-800">
+          <span className="text-gray-950">
             {value
               ? trimString(
                   data.find((d) => d.value == value)?.label ?? value,

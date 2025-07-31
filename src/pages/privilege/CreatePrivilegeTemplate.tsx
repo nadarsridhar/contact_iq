@@ -231,7 +231,7 @@ function CreatePrivilegeTemplate() {
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger>
+                      <SelectTrigger className="bg-gray-100 border-gray-300">
                         <SelectValue placeholder="Select a user category.." />
                       </SelectTrigger>
                     </FormControl>

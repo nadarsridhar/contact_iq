@@ -79,7 +79,7 @@ export default function ListView({
   ];
 
   return (
-    <div className="overflow-x-auto  max-h-[310px] overflow-auto border-gray-200 rounded border">
+    <div className="max-h-[70vh] lg:min-h-[20vh] lg:max-h-[45vh] overflow-auto border-gray-200 rounded border">
       <Table className="md:border border-stale-300 table-fixed">
         {!isMobile && ( 
           <ContextMenu modal={false}>

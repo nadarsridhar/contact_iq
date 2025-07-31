@@ -115,7 +115,7 @@ function CallTrafficClientDetails({ dateRange, selectedBranches = "" }) {
       }
     }, 500);
     return () => clearTimeout(handler);
-  }, [searchText, recordsPerPage, selectedBranches])
+  }, [searchText, recordsPerPage, selectedBranches]);
 
   return (
     <Modal

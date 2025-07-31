@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/tooltip";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent } from "@/components/ui/card";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface StatsCardProps {
   title: string;
@@ -29,6 +30,7 @@ function Stats({ stats, dateRange }) {
   const { isSuperAdmin, isBranchAdmin } = useAuth();
 
   const { isCallStatsAllowed, isChannelStatsAllowed } = usePrivilege();
+   const isMobile = useIsMobile();
 
   const statsArray: StatsCardProps[] = [
     {
@@ -44,6 +46,7 @@ function Stats({ stats, dateRange }) {
     {
       title: "Calls (Active / Peak)",
       value: stats?.ActiveCalls ?? 0,
+      icon: <LiveIcon className="text-red-700" size={18} />,
       Pvalue: stats?.PeakCalls ?? 0,
       Tvalue: stats?.PeakCallTime
         ? new Date(stats.PeakCallTime * 1000).toLocaleTimeString("en-US", {
@@ -51,8 +54,7 @@ function Stats({ stats, dateRange }) {
             minute: "2-digit",
             hour12: true,
           })
-        : "",
-      icon: <LiveIcon className="text-red-700" />,
+        : "", 
       hasPrivilege: isCallStatsAllowed && (isSuperAdmin || isBranchAdmin),
       color: "red",
     },
@@ -83,7 +85,7 @@ function Stats({ stats, dateRange }) {
         : 0,
       Pvalue: "",
       Tvalue: "",
-      icon: <TotalDuration className="text-purple-700" />,
+      icon: <TotalDuration className="text-purple-700" size={18} />,
       hasPrivilege: isCallStatsAllowed,
       color: "purple",
     },
@@ -98,7 +100,7 @@ function Stats({ stats, dateRange }) {
             hour12: true,
           })
         : "",
-      icon: <Rss className="text-yellow-700" />,
+      icon: <Rss className="text-yellow-700" size={18} />,
       hasPrivilege: isChannelStatsAllowed,
       color: "yellow",
     },
@@ -144,7 +146,8 @@ function Stats({ stats, dateRange }) {
   };
 
   return (
-    <div className="grid gap-4 w-full whitespace-nowrap grid-cols-2 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-4">
+    <div className="p-2">
+    <div className="grid gap-3 w-full whitespace-nowrap grid-cols-1 xs:grid-cols-1 md:grid-cols-3 lg:grid-cols-6">
       {statsArray
         .filter((stat) => stat.hasPrivilege)
         .map(
@@ -152,11 +155,11 @@ function Stats({ stats, dateRange }) {
             <Card
               className={`border-0 border-l-4 ${colorMap[color].bg} shadow-lg bg-gradient-to-br ${colorMap[color].fromTo}`}
             >
-              <CardContent className="p-6">
+              <CardContent className="p-5 ">
                 <div className="flex items-end justify-between">
-                  <div>
+                  <div className="flex-col">
                     <p
-                      className={`text-md font-semibold ${colorMap[color].text}`}
+                      className={`text-2xl font-semibold lg:text-base lg:font-semibold ${colorMap[color].text}`}
                     >
                       {title}
                     </p>
@@ -191,6 +194,7 @@ function Stats({ stats, dateRange }) {
             </Card>
           )
         )}
+        </div>
     </div>
   );
 }

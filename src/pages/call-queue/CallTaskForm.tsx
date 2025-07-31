@@ -402,7 +402,7 @@ function CallTaskForm() {
                       value={userCategory}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-gray-100 border-gray-300">
                           <SelectValue
                             placeholder={`Select ${globalState.AGENT_NAME} category..`}
                           />
@@ -479,7 +479,7 @@ function CallTaskForm() {
                         value={webrtcFlag}
                       >
                         <FormControl>
-                          <SelectTrigger>
+                          <SelectTrigger className="bg-gray-100 border-gray-300">
                             <SelectValue placeholder="Select user active.." />
                           </SelectTrigger>
                         </FormControl>
@@ -590,7 +590,7 @@ function CallTaskForm() {
                       value={String(loginMode)}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger bg-gray-100 border-gray-300>
                           <SelectValue placeholder="Select login mode.." />
                         </SelectTrigger>
                       </FormControl>
@@ -652,7 +652,7 @@ function CallTaskForm() {
                       value={activeFlag}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="border-gray-300 bg-gray-100">
                           <SelectValue placeholder="Select user active.." />
                         </SelectTrigger>
                       </FormControl>
@@ -1167,7 +1167,7 @@ function UsersForm() {
                       value={userCategory}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-gray-100 border-gray-300">
                           <SelectValue
                             placeholder={`Select ${globalState.AGENT_NAME} category..`}
                           />
@@ -1244,7 +1244,7 @@ function UsersForm() {
                         value={webrtcFlag}
                       >
                         <FormControl>
-                          <SelectTrigger>
+                          <SelectTrigger className="bg-gray-100 border-gray-300">
                             <SelectValue placeholder="Select user active.." />
                           </SelectTrigger>
                         </FormControl>
@@ -1355,7 +1355,7 @@ function UsersForm() {
                       value={String(loginMode)}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger bg-gray-100 border-gray-300>
                           <SelectValue placeholder="Select login mode.." />
                         </SelectTrigger>
                       </FormControl>

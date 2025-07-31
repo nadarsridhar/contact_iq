@@ -327,8 +327,8 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className=" border-gray-200 rounded border">
-      <div className="rounded-lg border border-stale-300 overflow-auto max-h-[450px]">
-        <Table className="w-full table-fixed ">
+      <div className="rounded-lg border border-stale-300 overflow-auto max-h-[60vh]">
+        <Table className="w-full table-fixed">
           {!isMobile && (
             <ContextMenu modal={false}>
               <ContextMenuTrigger asChild>
