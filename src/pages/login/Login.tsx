@@ -116,7 +116,7 @@ function Login() {
   }, [lastSavedCredentials]);
 
   return (
-    <div className="h-screen flex md:block flex-col items-center justify-center">
+    <div className="h-screen flex md:block flex-col items-center justify-center bg-orange-50">
       <img className="w-20 mx-5  md:mt-5" src={logo} alt="Logo" />
       <div className="flex flex-col justify-between items-center mt-4 md:mt-32">
         <Card className="mx-2 lg:mx-auto max-w-sm border-2 border-[#0027341f] shadow-lg rounded-xl py-2 mb-32 md:mb-0">
@@ -149,7 +149,7 @@ function Login() {
                           <>
                             <Input
                               {...field}
-                              placeholder="Your agent id"
+                              placeholder="Your Agent ID"
                               autoFocus
                               name="username"
                               id="username"
@@ -184,7 +184,7 @@ function Login() {
                             <Input
                               id="password"
                               name="password"
-                              placeholder="password here"
+                              placeholder="Your Password"
                               type={showPassword ? "text" : "password"}
                               required
                               autoComplete="current-password"

@@ -327,12 +327,12 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className=" border-gray-200 rounded border">
-      <div className="rounded-lg border border-stale-300 overflow-auto max-h-[60vh]">
+      <div className="rounded-lg border border-stale-300 overflow-y-auto w-full max-h-[60vh]">
         <Table className="w-full table-fixed">
           {!isMobile && (
             <ContextMenu modal={false}>
               <ContextMenuTrigger asChild>
-                <TableHeader className="bg-gray-300">
+                <TableHeader className="bg-gray-300 sticky top-0 z-10">
                   {table.getHeaderGroups().map((headerGroup) => (
                     <TableRow key={headerGroup.id}>
                       {headerGroup.headers.map((header) => {

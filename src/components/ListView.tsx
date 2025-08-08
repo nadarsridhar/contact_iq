@@ -79,12 +79,12 @@ export default function ListView({
   ];
 
   return (
-    <div className="max-h-[70vh] lg:min-h-[20vh] lg:max-h-[45vh] overflow-auto border-gray-200 rounded border">
-      <Table className="md:border border-stale-300 table-fixed">
+    <div className="max-h-[70vh] md:max-h-[45vh] lg:min-h-[20vh] lg:max-h-[45vh] overflow-x-auto overflow-y-auto relative border-gray-200 rounded border">
+      <Table className="md:border border-stale-300 table-fixed w-full">
         {!isMobile && ( 
           <ContextMenu modal={false}>
             <ContextMenuTrigger asChild>
-              <TableHeader className="bg-gray-200 group">
+              <TableHeader className="bg-gray-200 group sticky top-0 z-10">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => {

@@ -38,7 +38,7 @@ function Stats({ stats, dateRange }) {
       value: stats?.TotalCalls ?? 0,
       Pvalue: "",
       Tvalue: "",
-      icon: <Phone className="text-blue-700" size={18} />,
+      icon: <Phone className="text-blue-700" size={25} />,
       hasPrivilege: isCallStatsAllowed,
       color: "blue",
     },
@@ -46,7 +46,7 @@ function Stats({ stats, dateRange }) {
     {
       title: "Calls (Active / Peak)",
       value: stats?.ActiveCalls ?? 0,
-      icon: <LiveIcon className="text-red-700" size={18} />,
+      icon: <LiveIcon/>,
       Pvalue: stats?.PeakCalls ?? 0,
       Tvalue: stats?.PeakCallTime
         ? new Date(stats.PeakCallTime * 1000).toLocaleTimeString("en-US", {
@@ -64,7 +64,7 @@ function Stats({ stats, dateRange }) {
       value: stats?.IncomingCalls ?? 0,
       Pvalue: "",
       Tvalue: "",
-      icon: <PhoneIncoming className="text-green-700" size={18} />,
+      icon: <PhoneIncoming className="text-green-700" size={25} />,
       hasPrivilege: isCallStatsAllowed,
       color: "green",
     },
@@ -74,7 +74,7 @@ function Stats({ stats, dateRange }) {
       value: stats?.OutgoingCalls ?? 0,
       Pvalue: "",
       Tvalue: "",
-      icon: <PhoneOutgoing className="text-orange-700" size={18} />,
+      icon: <PhoneOutgoing className="text-orange-700" size={25} />,
       hasPrivilege: isCallStatsAllowed,
       color: "orange",
     },
@@ -85,7 +85,7 @@ function Stats({ stats, dateRange }) {
         : 0,
       Pvalue: "",
       Tvalue: "",
-      icon: <TotalDuration className="text-purple-700" size={18} />,
+      icon: <TotalDuration className="text-purple-700" size={25} />,
       hasPrivilege: isCallStatsAllowed,
       color: "purple",
     },
@@ -100,7 +100,7 @@ function Stats({ stats, dateRange }) {
             hour12: true,
           })
         : "",
-      icon: <Rss className="text-yellow-700" size={18} />,
+      icon: <Rss className="text-yellow-700" size={25} />,
       hasPrivilege: isChannelStatsAllowed,
       color: "yellow",
     },
@@ -188,7 +188,7 @@ function Stats({ stats, dateRange }) {
                       )}
                     </p>
                   </div>
-                  <div className="p-2 bg-gray-100 rounded-lg">{icon}</div>
+                  <div className="p-2  rounded-lg">{icon}</div>
                 </div>
               </CardContent>
             </Card>
